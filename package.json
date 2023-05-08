@@ -1,0 +1,60 @@
+{
+  "name": "news-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "engines": {
+    "node": ">=12.0.0 <17.5.0",
+    "npm": ">=8.1.2"
+  },
+  "engine-strict": true,
+  "scripts": {
+    "start": "NODE_ENV=production node src/bin/www.js",
+    "dev": "NODE_ENV=development nodemon src/bin/www.js",
+    "staging": "NODE_ENV=development node src/bin/www.js",
+    "inspect": "nodemon --inspect src/bin/www.js",
+    "test": "jest",
+    "lint": "npm run lint:js ",
+    "lint:eslint": "eslint --ignore-path .gitignore --ext .ts",
+    "lint:js": "npm run lint:eslint src/",
+    "lint:fix": "npm run lint:js -- --fix",
+    "prettier": "prettier --check **/*.js",
+    "prettier:fix": "prettier --write **/*.js"
+  },
+  "keywords": [],
+  "author": "Vishwas TN",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.4",
+    "crypto": "^1.0.1",
+    "dotenv": "^5.0.1",
+    "express": "^4.17.1",
+    "http-status": "^1.5.0",
+    "ioredis": "^4.14.1",
+    "joi": "^17.6.0",
+    "method-override": "^3.0.0",
+    "mongodb": "latest",
+    "mongoose": "^5.9.1",
+    "morgan": "^1.9.1",
+    "node-cache": "^5.1.2",
+    "nodemon": "^2.0.2",
+    "path": "^0.12.7",
+    "uuid": "^8.3.2",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.17.0",
+    "jest": "latest",
+    "prettier": "^1.17.1"
+  },
+  "bugs": {},
+  "homepage": ""
+}
